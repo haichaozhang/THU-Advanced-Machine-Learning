@@ -69,4 +69,33 @@ $$J^{\theta^{k}}_{PPO2}(\theta) \approx \sum\limits_{s_t,a_t}
 ## 实验结果
 
 
+PPO 实验结果
+
+```
+INFO     - 2020-08-16 15:26:11,740 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:910654 episode:463 R:11.0
+INFO     - 2020-08-16 15:26:11,742 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.5543091417253018), ('average_entropy', 1.517397509098053), ('average_value_loss', 0.025153092299588023), ('average_policy_loss', 0.04050688760820776), ('n_updates', 85344), ('explained_variance', -0.47476719589219707)]
+INFO     - 2020-08-16 15:30:28,252 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:912654 episode:464 R:4.0
+INFO     - 2020-08-16 15:30:28,254 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.3897204238027334), ('average_entropy', 1.5521333111524582), ('average_value_loss', 0.013587664375081658), ('average_policy_loss', 0.0311335660610348), ('n_updates', 85536), ('explained_variance', 0.05930144393108017)]
+INFO     - 2020-08-16 15:34:52,123 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:914654 episode:465 R:15.0
+INFO     - 2020-08-16 15:34:52,123 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.43319391134381297), ('average_entropy', 1.5603680599927903), ('average_value_loss', 0.042913269293494524), ('average_policy_loss', -0.014634510464966298), ('n_updates', 85728), ('explained_variance', 0.03343169571326343)]
+INFO     - 2020-08-16 15:39:22,640 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:916654 episode:466 R:14.0
+INFO     - 2020-08-16 15:39:22,641 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.5002812175452709), ('average_entropy', 1.5485603406429291), ('average_value_loss', 0.03476092209108174), ('average_policy_loss', -0.02265726391458884), ('n_updates', 85920), ('explained_variance', 0.05025980433827648)]
+INFO     - 2020-08-16 15:43:58,517 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:918654 episode:467 R:18.0
+INFO     - 2020-08-16 15:43:58,519 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.5998032909631729), ('average_entropy', 1.5367438489198684), ('average_value_loss', 0.04436525441706181), ('average_policy_loss', -0.06271141972392798), ('n_updates', 86112), ('explained_variance', 0.2724592732151887)]
+INFO     - 2020-08-16 15:48:38,172 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:920654 episode:468 R:13.0
+INFO     - 2020-08-16 15:48:38,173 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.6808629174530506), ('average_entropy', 1.532112445116043), ('average_value_loss', 0.03180149367079139), ('average_policy_loss', 0.02643578812945634), ('n_updates', 86304), ('explained_variance', -0.08873544858745008)]
+INFO     - 2020-08-16 15:53:10,302 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:922654 episode:469 R:6.0
+INFO     - 2020-08-16 15:53:10,303 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.5570736033320427), ('average_entropy', 1.562359517812729), ('average_value_loss', 0.02234099885681644), ('average_policy_loss', 0.0412096269056201), ('n_updates', 86496), ('explained_variance', -0.04507384108457679)]
+INFO     - 2020-08-16 15:57:51,312 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:924654 episode:470 R:11.0
+INFO     - 2020-08-16 15:57:51,313 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.6005026571452617), ('average_entropy', 1.554698968410492), ('average_value_loss', 0.045910905450582504), ('average_policy_loss', -0.040378238311968746), ('n_updates', 86592), ('explained_variance', 0.04908961606728113)]
+INFO     - 2020-08-16 16:02:04,580 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:926654 episode:471 R:7.0
+INFO     - 2020-08-16 16:02:04,581 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.5473430073857307), ('average_entropy', 1.5559546210765838), ('average_value_loss', 0.04274751533288509), ('average_policy_loss', 0.005384650025516749), ('n_updates', 86784), ('explained_variance', 0.10809829338591137)]
+INFO     - 2020-08-16 16:06:18,129 - [chainerrl.experiments.train_agent train_agent 59] outdir:results/MineRLTreechop-v0/ppo/20200815T054531.523113 step:928654 episode:472 R:14.0
+INFO     - 2020-08-16 16:06:18,130 - [chainerrl.experiments.train_agent train_agent 60] statistics:[('average_value', 0.505685574799776), ('average_entropy', 1.5621364288330077), ('average_value_loss', 0.037670681169256565), ('average_policy_loss', -0.018078460022807122), ('n_updates', 86976), ('explained_variance', 0.3323250595296626)]
+
+```
+
+
+
+
 
