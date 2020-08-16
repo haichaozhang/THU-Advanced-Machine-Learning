@@ -45,7 +45,7 @@ $$E_{x \sim p}[f(x)] \\=  \int f(x)p(x)dx \\= \int f(x) \frac{p(x)}{q(x)}q(x)dx 
 
 使用$\theta^{'}$采样的数据，训练$\theta$这个actor，过程中$\theta^{'}$是fixed的所以可以重复使用用$\theta^{'}$的数据训练$\theta$许多次，增加数据利用率，提高训练速度，为openAI的default方法。显然，此方法转为了off-policy。因为$\theta^{'}$是与环境交互的actor，所以advantage function 的估计需要使用$\theta^{'}$的数据。
 
-$$E_{s_t,a_t}\sim \pi_{\theta^{'}}[\frac{p_{\theta}(a_t|s_t)}{p_{\theta^{'}(a_t|s_t)}}\frac{p_{\theta}(s_t)}{p_{\theta^{'}(s_t)}}] A^{\theta^{'}(s_t.a_t)\nabla \log P_{\theta}(a^n_t|s^n_t) }$$
+$$E_{s_t,a_t}\sim \pi_{\theta^{'}}[\frac{p_{\theta}(a_t|s_t)}{p_{\theta^{'}(a_t|s_t)}}\frac{p_{\theta}(s_t)}{p_{\theta^{'}(s_t)}}] A^{\theta^{'}}(s_t.a_t)\nabla \log P_{\theta}(a^n_t|s^n_t)$$
 
 上述公式为跟新需要的gradient，其中假设在不同actor中看到的s概率一样，则可以简化。通过gradient可以反推出目标函数.
 
@@ -53,8 +53,7 @@ $$J^{\theta^{'}}(\theta) = E_{(s_t,a_t) \sim \pi_{\theta^{'}}} [\frac{p_{\theta}
 
 为了使$\theta$和$\theta^{'}$不要相隔太远的话，我们引入了两个新的方法，一种是PPO / TRPO，ppo是trpo的改进版，在编程方面，前者是更加轻松的。引入一个$KL(\theta,\theta^{'} )$，如果$\theta$,$\theta^{'}$ 相差太大，$KL(\theta,\theta^{'} )$的值就非常大，如果$\theta$,$\theta^{'}$ 相差小，$KL(\theta,\theta^{'} )$的值就非常小。PPO2不用计算KL，同样可以控制θ与θ'之间差距.
 
-$$J^{\theta^{k}}_{PPO2}(\theta) \approx \sum\limits_{s_t,a_t} 
-\min(\frac{p_\theta(a_t|s_t)}{p_\theta^{k}(a_t|s_t)}A^{\theta^{k}}(s_t,a_t)),clip(\frac{p_\theta(a_t|s_t)}{p_\theta^{k}(a_t|s_t)},1-\varepsilon ,1+\varepsilon)A^{\theta^{k}}(s_t,a_t))$$
+$$J^{\theta^{k}}_{PPO2}(\theta) \approx \sum\limits_{s_t,a_t}\min(\frac{p_\theta(a_t|s_t)}{p_\theta^{k}(a_t|s_t)}A^{\theta^{k}}(s_t,a_t)),clip(\frac{p_\theta(a_t|s_t)}{p_\theta^{k}(a_t|s_t)},1-\varepsilon,1+\varepsilon)A^{\theta^{k}}(s_t,a_t))$$
 
 ### Behavior Cloning 
 
