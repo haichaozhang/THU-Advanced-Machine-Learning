@@ -1,5 +1,7 @@
 # 《我的世界》中的高效强化学习竞赛
 
+可以完整显示公式的链接[https://gitee.com/nmgzhc/THU-Advanced-Machine-Learning/tree/master/importance%20homework](https://gitee.com/nmgzhc/THU-Advanced-Machine-Learning/tree/master/importance%20homework
+)
 ## 摘要
 
 虽然深度强化学习在许多困难领域取得了突破，但这些成功需要越来越多的样本。由于最先进的强化学习（RL）系统需要成倍增加的样本数，因此它们的发展受限于AI社区的不断缩小。同样，许多这样的系统也不能应用于现实世界中的问题，因为环境样本是高附加的。解决这些局限性需要新的、有效的样本方法。为了促进这一方向的研究，本文设计基于人类先验知识的样本有效强化学习的miner竞争。竞争的主要目标是促进算法的发展，这些算法能够有效地利用人类的演示，从而大大减少解决复杂、分层和稀疏环境所需的样本数量。
